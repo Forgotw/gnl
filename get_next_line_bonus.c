@@ -6,16 +6,11 @@
 /*   By: lsohler <lsohler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 10:19:47 by lsohler           #+#    #+#             */
-/*   Updated: 2022/11/11 14:52:19 by lsohler          ###   ########.fr       */
+/*   Updated: 2022/11/17 12:27:50 by lsohler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-//#include <string.h>
-#include <stdio.h>
-//#include <stdlib.h>
-//#include <unistd.h>
-#include <fcntl.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -113,26 +108,3 @@ char	*get_next_line(int fd)
 	stash[fd] = ft_trim_stash(stash[fd]);
 	return (str);
 }
-/*
-int	main(void)
-{
-	int		fd;
-	char	*str;
-	int		i;
-//	static char *test;
-//	char testjoin[] = "Bonjour";
-
-	i = 0;
-	fd = open("gnltest", O_RDONLY);
-	str = get_next_line(fd);
-	printf("%s", str);
-	while (i != 15 && str != NULL)
-	{
-		str = get_next_line(fd);
-		printf("%sGNL\n", str);
-		i++;
-	}
-//	test = ft_strjoin(test, testjoin);
-//	printf("%s\n", test);
-	close(fd);
-}*/
